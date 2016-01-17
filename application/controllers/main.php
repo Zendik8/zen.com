@@ -9,9 +9,9 @@ class Main extends CI_Controller {
             'title' => 'main_title'
         );
 
-        $this->load->view('head_view', $data);
-        $this->load->view('header_view');
+        $this->load->view('head_v', $data);
+        $this->load->view('header_v');
         $this->load->view('main');
-        $this->load->view('footer_view');
+        $this->load->view('footer_v');
     }
 }

@@ -2,13 +2,6 @@
 
 class Articles_m extends CI_Model
 {
-    /*
-    var $id = '';
-    var $title = '';
-    var $text = '';
-    var $date = '';
-    */
-
     function get_articles()
     {
         $query = $this->db->get('blog');
@@ -16,6 +9,19 @@ class Articles_m extends CI_Model
         return $query->result_array();
         // Повертаємо змінну $query у вигляді масива result_array
     }
-
+    function addArticle($data)
+    {
+        $this->db->insert('blog', $data);
+    }
+    function editArticle($data)
+    {
+        $this->db->where('id', '5');
+        $this->db->update('articles', $data);
+    }
+    function deleteArticle($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('articles');
+    }
 
 }

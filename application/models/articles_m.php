@@ -15,8 +15,8 @@ class Articles_m extends CI_Model
     }
     function editArticle($data)
     {
-        $this->db->where('id', '5');
-        $this->db->update('articles', $data);
+        $this->db->where('id', $data['id']);
+        $this->db->update('blog', $data);
     }
     function deleteArticle($id)
     {

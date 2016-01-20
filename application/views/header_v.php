@@ -16,9 +16,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo base_url('/') ?>">Main</a></li>
-                    <li><a href="<?php echo base_url('articles_c/') ?>">Blog</a>
-                    <li><a href="<?php echo base_url('addArticles_c') ?>">Додати статтю</a></li>
+                    <li><a href="<?php echo base_url() ?>">Головна</a></li>
+                    <li><a href="<?php echo base_url() ?>getArticles_c/">Блог</a>
+                    <li><a href="<?php echo base_url() ?>addArticle_c">Додати статтю</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

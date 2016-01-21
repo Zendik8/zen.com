@@ -15,13 +15,13 @@ class Articles_m extends CI_Model
     }
     function editArticle($data)
     {
-        $this->db->where('id', $data['id']);
+        $this->db->where('id', '4');
         $this->db->update('blog', $data);
     }
     function deleteArticle($id)
     {
         $this->db->where('id', $id);
-        $this->db->delete('articles');
+        $this->db->delete('blog');
     }
 
 }

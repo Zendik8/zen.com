@@ -8,8 +8,8 @@
                 <p><? echo $article['content'];?></p>
                 <p><? echo $article['date'];?></p>
                 <div>
-                    <a href="<?=base_url('');?>editArticle_c">Редагувати</a>
-                    <a href="<?=base_url('');?>addArticles_c/deleteArticle">Видалити</a>
+                    <a href="<?=base_url('');?>editArticle_c/editArticle">Редагувати</a>
+                    <a href="<?=base_url('');?>deleteArticle_c/deleteArticle/<? echo $article['id'];?>">Видалити</a>
                 </div>
             <?php endforeach; ?>
             <br>

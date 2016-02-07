@@ -1,5 +1,5 @@
 <div class="container">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -16,11 +16,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+
                     <li><a href="<?php echo base_url() ?>">Головна</a></li>
-                    <li><a href="<?php echo base_url() ?>getArticles_c/">Блог</a>
-                    <li><a href="<?php echo base_url() ?>addArticle_c">Додати статтю</a></li>
+                    <li><a href="<?php echo base_url() ?>getShortArticles_c/">Блог</a>
                 </ul>
             </div><!-- /.navbar-collapse -->
+            <!--
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="<?php echo base_url() ?>registration_c">Реєстрація</a></li>
+                    <li><a href="<?php echo base_url() ?>login_c">Авторизація</a></li>
+                    <li><a href="<?php echo base_url() ?>login_c/logout">Вийти</a></li>
+                </ul>
+            </div><!-
+            -->
         </div><!-- /.container-fluid -->
     </nav>
 </div>

@@ -1,11 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12"
+        <div class="col-xs-12">
             <h2>Додати нову статтю!</h2>
             <form method="post" action="<?=base_url('');?>index.php/addArticle_c/addArticle">
-                Назва статті:<br/><input type="text" name="title" value="<?//=set_value('title')?>"/><br/>
-                Текст статті:<br/><textarea name="content" rows="10" cols="40"><?//=set_value('text')?></textarea><br/>
-                <input type="submit" name="add" value="Добавити"/><br/>
+                <p>Назва статті:</p><input type="text" class="form-control" name="title"/>
+                <p>Текст статті:</p><textarea id="ckeditor" name="content" class="form-control" rows="10" cols="40"></textarea>
+                <p>Дата публікації:</p><input type="date" class="form-control" name="date"/>
+                <input type="submit" class="btn btn-primary" name="add" value="Добавити"/><br/>
             </form>
         </div>
     </div>

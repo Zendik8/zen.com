@@ -2,26 +2,32 @@
 
 class Articles_m extends CI_Model
 {
-    function get_articles()
+    function get_articles($num, $segment)
     {
-        $query = $this->db->get('blog');
-        //Записуємо у змінну $query всі дані що знаходяться в таблиці 'blog'
+        $query = $this->db->get('blog', $num, $segment);
         return $query->result_array();
-        // Повертаємо змінну $query у вигляді масива result_array
+    }
+
+    function get_articles_id($id)
+    {
+        $query = $this->db->get_where('blog', array('id' => $id));
+        $queryId = $query->result_array();
+        return $queryId['0'];
     }
     function addArticle($data)
     {
         $this->db->insert('blog', $data);
     }
-    function editArticle($data)
+    function editArticle($getArticlesId)
     {
-        $this->db->where('id', '4');
-        $this->db->update('blog', $data);
+        $id = $getArticlesId['id'];
+        $where = "id = $id";
+        $this->db->update('blog', $getArticlesId, $where);
+
     }
     function deleteArticle($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('blog');
     }
-
 }
